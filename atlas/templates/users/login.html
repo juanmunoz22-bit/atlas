@@ -1,0 +1,25 @@
+{% extends 'users/base.html' %}
+
+{% block head_content %}
+    <title>Ubikt Sign In!</title>
+{% endblock  %}
+
+{% block  container %}
+    {% if form.errors %}
+        <p class="alert alert-danger">
+            Your username or password are incorrect
+        </p>
+    {% endif %}
+
+    <form action="{% url 'users:login' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Username" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-5">Sign in!</button>
+    </form>
+
+{% endblock %}
