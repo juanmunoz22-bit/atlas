@@ -50,3 +50,132 @@ html, body {
     width: 100%; 
 }
 
+.Layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .Layout__Container.Layout__Container--menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 15%;
+    height: 100%;
+    border-right: 1px solid black;
+  }
+  
+  .Layout__Container.Layout__Container--main-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+  }
+  
+  .Layout__Image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  
+  .Menu {
+    width: 100%;
+    list-style: none;
+  }
+  
+  .Menu__Item {
+    margin: 2rem 0;
+  }
+  
+  .Menu__Item-Link {
+    width: 100%;
+    color: gray;
+    font-size: 1.8rem;
+    text-decoration: none;
+    cursor: not-allowed;
+  }
+  
+  .Menu__Item-Link--active {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .Files__Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15rem;
+    width: 25%;
+    background-color: transparent;
+    border: 1px dashed black;
+    border-radius: 0.6rem;
+    transition: 0.3s;
+  }
+  
+  .Files__Container:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .Files__Text {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.4rem;
+    color: gray;
+    text-transform: uppercase;
+  }
+  
+  .Files__Text > svg {
+    fill: gray;
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .Files__Text > span {
+    margin-top: 2rem;
+  }
+  
+  .Files__Input {
+    padding: 0.6rem;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .Files__Input:hover {
+    background-color: #cdcdff;
+    border-color: #3838ff;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
