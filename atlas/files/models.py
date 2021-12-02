@@ -30,4 +30,7 @@ class File_Fixed(models.Model):
     dias_trab = models.IntegerField(null=True)
     dias_incap = models.IntegerField(null=True)
     dias_licen = models.IntegerField(null=True)
+    total_dias = models.IntegerField(null=True)
     f_ingreso = models.DateField(null=True)
+    #add a foreign key to the file header table referencia field
+    referencia = models.OneToOneField(File_Header, on_delete=models.CASCADE)
